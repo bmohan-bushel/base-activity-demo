@@ -2,15 +2,17 @@ package com.bushel.bmohan.baseactivitydemo.mvp
 
 import android.app.Application
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
 import com.afollestad.materialdialogs.customview.getCustomView
 import com.bushel.bmohan.baseactivitydemo.R
 import dagger.android.support.DaggerAppCompatActivity
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.dialog_loading.view.*
 import javax.inject.Inject
 
-abstract class BaseActivity<T : BasePresenter> : DaggerAppCompatActivity(), IBaseView {
+abstract class BaseActivity<T : BasePresenter> : AppCompatActivity(), IBaseView {
 
     @Inject
     protected lateinit var app: Application

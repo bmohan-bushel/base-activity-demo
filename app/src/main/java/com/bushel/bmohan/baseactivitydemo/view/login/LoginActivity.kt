@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.widget.Toast
 import com.bushel.bmohan.baseactivitydemo.R
 import com.bushel.bmohan.baseactivitydemo.mvp.BaseActivity
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.content_login.*
 
+@AndroidEntryPoint
 class LoginActivity : BaseActivity<LoginPresenter>(), ILoginView {
 
     companion object {

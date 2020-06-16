@@ -1,12 +1,13 @@
 package com.bushel.bmohan.baseactivitydemo.view.login
 
-import com.bushel.bmohan.baseactivitydemo.di.ActivityScope
 import dagger.Binds
 import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ActivityComponent
 
 @Module
+@InstallIn(ActivityComponent::class)
 abstract class LoginModule {
-    @ActivityScope
     @Binds
     abstract fun provideLoginView(activity: LoginActivity): ILoginView
 }
