@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Base Activity Demo</string>
+    <string name="progress_loading">Loading</string>
+    <string name="dialog_error_title">Error</string>
+    <string name="dialog_ok">OK</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="username_error">Invalid Username</string>
+    <string name="password_error">Invalid Password</string>
 </resources>
