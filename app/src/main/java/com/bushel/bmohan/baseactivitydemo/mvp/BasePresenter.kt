@@ -12,7 +12,7 @@ abstract class BasePresenter {
     }
 
     open fun onPause() {
-        //NO-OP
+        presenterScope.cancel()
     }
 
     open fun onResume() {

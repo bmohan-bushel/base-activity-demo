@@ -7,8 +7,6 @@ import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
 import com.afollestad.materialdialogs.customview.getCustomView
 import com.bushel.bmohan.baseactivitydemo.R
-import dagger.android.support.DaggerAppCompatActivity
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.dialog_loading.view.*
 import javax.inject.Inject
 
