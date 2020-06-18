@@ -7,7 +7,7 @@ import com.myriadmobile.fargoeventsboard.data.Result
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class LoginPresenter @Inject constructor(private val view: ILoginView, private val service: ILoginService) : BasePresenter() {
+class LoginPresenter @Inject constructor(private val view: ILoginView?, private val service: ILoginService) : BasePresenter() {
 
     private lateinit var username: String
     private lateinit var password: String
@@ -20,13 +20,13 @@ class LoginPresenter @Inject constructor(private val view: ILoginView, private v
                 val result = service.login(username, password)
 
                 when (result) {
-                    is Result.Success -> view.onLoginSuccess()
-                    is Result.Error -> view.onInvalidCredentials()
-                    is Result.Exception -> view.showNetworkError(result.exception.message.toString())
+                    is Result.Success -> view?.onLoginSuccess()
+                    is Result.Error -> view?.onInvalidCredentials()
+                    is Result.Exception -> view?.showNetworkError(result.exception.message.toString())
                 }
             }
         } else {
-            view.onInvalidCredentials()
+            view?.onInvalidCredentials()
         }
     }
 
